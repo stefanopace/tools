@@ -1,3 +1,5 @@
 Per usare questi strumenti aggiungere la cartella bin alla variabile di sistema PATH.
 Per farlo puoi aggiungere al file ~/.bashrc la seguente riga (cambiando il percorso con quello corretto):
 export PATH=$PATH:/home/stefano/Scrivania/utilities/tools/bin
+
+I file nella cartella bin devono avere i permessi di esecuzione.
