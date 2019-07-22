@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ "$1" == "" ]; then
+    echo "No file to archive"
+else
+    DATE=`date +%F`
+    mkdir -p .archive/$DATE
+    mv --backup=numbered "$@" .archive/$DATE
+fi

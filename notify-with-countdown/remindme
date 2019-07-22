@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ "$1" == "" ]; then
+  echo "You must enter time interval!"
+  exit -1;
+fi
+
+if [ "$2" == "" ]; then
+  echo "You must enter a message!"
+  exit -1;
+fi
+
+sleep $1
+notify-send "${*:2}" -t 99999 -u critical -i user-idle-panel

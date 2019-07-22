@@ -1,0 +1,5 @@
+curl-o-matic/test-data/requests/
+curl-o-matic/test-data/responses/
+.idea/
+__pycache__/
+

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [[ "$1" == "" ]]; then
+  >&2 echo "wordn: You must enter a number"
+  exit -1;
+fi
+
+while read line
+do
+  words=($(echo $line | tr "\t" " " | tr -s " "))
+  echo ${words[$1]}
+done < "${2:-/dev/stdin}"
