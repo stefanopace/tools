@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
 if [[ "$1" == "" ]]; then
-  >&2 echo "wordn: You must enter a number"
-  exit -1;
+  while read line
+  do
+    words=($(echo $line | tr "\t" " " | tr -s " "))
+    output=''
+    for index in "${!words[@]}"
+    do
+      output="$output [$(( $index + 1 ))]${words[$index]}"
+    done
+    echo $output
+  done < "/dev/stdin"
+  exit 0
 fi
 
 if [[ "$1" == "-d" ]]; then
