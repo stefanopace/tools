@@ -8,5 +8,10 @@ fi
 while read line
 do
   words=($(echo $line | tr "\t" " " | tr -s " "))
-  echo ${words[$1]}
-done < "${2:-/dev/stdin}"
+  output=''
+  for index in $@
+  do
+    output="$output ${words[$(( $index - 1 ))]}"
+  done
+  echo $output
+done < "/dev/stdin"
