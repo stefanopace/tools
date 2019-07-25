@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ "$1" == "" ]]; then
+  head -n -1
+else
+  head -n -$1
+fi
+

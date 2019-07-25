@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ "$1" == "" ]]; then
+  tail -n +2
+else
+  tail -n +$(( $1 + 1 ))
+fi
+
