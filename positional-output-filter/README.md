@@ -46,7 +46,7 @@ drwxrwxr-x 2 4096 lug 22 10:31 .idea
 ---
 Per sapere gli indici delle parole dell'output si può richiamare il programma senza parametri, es:
 ```
-ls -al | wordn -d 3 4
+ls -al | wordn
 ```
 darà
 ```
