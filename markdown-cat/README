@@ -1,0 +1,5 @@
+Stampa nel terminale i file markdown renderizzati, es.
+
+mdcat test.md
+
+per funzionare ha bisogno di pandoc e w3m
