@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import sys
+
+left_filename = sys.argv[1]
+rigth_filename = sys.argv[2]
+with open(left_filename) as left_file:
+    left = left_file.readlines()
+
+with open(rigth_filename) as rigth_file:
+    rigth = rigth_file.readlines()
+
+print('Lines that appears only in {}:'.format(left_filename))
+for line in left:
+    if line not in rigth:
+        print(line)
+
+print('Lines that appears only in {}:'.format(rigth_filename))
+for line in rigth:
+    if line not in left:
+        print(line)
