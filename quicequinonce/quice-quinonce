@@ -19,3 +19,8 @@ print('Lines that appears only in {}:'.format(rigth_filename))
 for line in rigth:
     if line not in left:
         print(line)
+
+print('Lines that appears in both:')
+for line in rigth:
+    if line in left:
+        print(line)
