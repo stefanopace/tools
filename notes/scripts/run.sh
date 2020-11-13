@@ -8,7 +8,7 @@ fi;
 
 selected="$($NOTE_HOME/scripts/list_notes.sh | fzf --reverse --height 15 --border --no-info)"
 
-if [ -z $selected ]; then
+if [ -z "$selected" ]; then
 	exit 0
 fi;
 
