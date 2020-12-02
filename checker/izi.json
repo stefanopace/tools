@@ -1,0 +1,13 @@
+{
+	"type": "recursive",
+	"set": [ { "name": "last" } ],
+	"accumulator": { "name": "acc", "initial": "" },
+	"execute": ["check {acc}"],
+	"stop-condition": ["false"],
+	"handlers": [ 
+		{
+			"type": "leaf",
+			"execute": ["false"]
+		}
+	]
+}
