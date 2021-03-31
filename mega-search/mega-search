@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+	exit 1;
+fi
+
+editor=${2:-"gedit"}
+
+rg --json "$1" | jq -c 'select(.type == "match")' | jq -r '"\(.data.path.text):\(.data.line_number)"' | fzf --delimiter=":" --preview-window=down --preview "fzf-smartpreview {+1} {+2}" --bind "enter:execute($editor {+1} +{+2})"
