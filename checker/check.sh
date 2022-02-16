@@ -1,3 +1,3 @@
 check() {
-	php /home/stefano/Scrivania/utilities/tools/checker/check.php "$1"
+	python3 /home/stefano/tools/checker/check.py "$1"
 }
