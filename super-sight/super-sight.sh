@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 frg_preview () {
 output="$1"
 IFS=':' command eval 'output=($output)'
