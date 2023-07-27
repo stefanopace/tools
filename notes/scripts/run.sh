@@ -14,4 +14,4 @@ fi;
 
 filename="$(echo "${selected}" | sed -E "s/[^\t]*\t(.*)/\1/")"
 
-vim "$NOTE_HOME/notes/$filename"
+vim '+normal G$' "$NOTE_HOME/notes/$filename"
